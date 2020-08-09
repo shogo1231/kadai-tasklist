@@ -2,7 +2,7 @@
 
 <%= form_with(model: @user, local: true) do |f| %>
 
-  <%= render 'layouts/error_messages', model: f.object %>
+  <%= render 'error_messages', model: f.object %>
 
   <%= f.label :name, 'Name' %>
   <%= f.text_field :name %>
@@ -17,5 +17,7 @@
   <%= f.password_field :password_confirmation %>
 
   <%= f.submit 'Sign up' %>
+  
+  <p><%= link_to 'Back to toppage', root_url %></p>
   
 <% end %>
